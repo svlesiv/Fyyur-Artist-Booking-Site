@@ -1,0 +1,24 @@
+{% extends 'layouts/main.html' %} {% block title %}{{ album.title }} | Album{%
+endblock %} {% block content %}
+<div class="row">
+  <div class="col-sm-6">
+    <h1 class="monospace">
+      {{ album.title }}
+    </h1>
+    <a href="/artists/{{ album.artist_id }}">{{ album.artist_name}}</a>
+  </div> 
+</div>
+
+<section>
+  <h2 class="monospace">Songs</h2>
+  <div class="row">
+    {%for song in album.songs %}
+    <div class="item song">
+      <i class="fas fa-music"></i>
+      <h5>{{ song.title }}</h5>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
