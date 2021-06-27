@@ -103,15 +103,15 @@ block content %}
   </div>
 </section>
 
-<section class='show-venue-actions'>
-	<a href="/venues/{{ venue.id }}/edit"
-	><button class="btn btn-primary btn-lg">Edit</button></a
-	>
-	<form action="/venues/{{ venue.id }}/delete" method="post">
-		<button class="btn btn-primary btn-lg">
-			Delete
-		</button>
-	</form>
+<section class="show-venue-actions">
+  <a href="/venues/{{ venue.id }}/edit"
+    ><button class="btn btn-primary btn-lg">Edit</button></a
+  >
+  <form action="/venues/{{ venue.id }}/delete" method="post">
+    <button class="btn btn-primary btn-lg">
+      Delete
+    </button>
+  </form>
 </section>
 
 {% endblock %}
